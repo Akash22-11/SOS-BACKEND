@@ -7,6 +7,7 @@ const logger   = require('../utils/logger');
  * (The MongoDB TTL index removes the document, but we want a status change first.)
  */
 
+
 const expireStaleEvents = cron.schedule('*/5 * * * *', async () => {
   try {
     const result = await SOSEvent.updateMany(
