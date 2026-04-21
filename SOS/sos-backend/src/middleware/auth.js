@@ -3,9 +3,11 @@ const User     = require('../models/User');
 const Hospital = require('../models/Hospital');
 const logger   = require('../utils/logger');
 
+
 /**
  * Protect routes for authenticated patients.
  */
+
 const protectUser = async (req, res, next) => {
   try {
     const token = extractToken(req);
