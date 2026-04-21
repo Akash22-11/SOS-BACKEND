@@ -16,8 +16,10 @@ app.use(helmet());
 app.use(cors({ origin: process.env.CLIENT_ORIGIN || '*', credentials: true }));
 app.use(express.json());
 
+
 // Global rate limiter (100 req / 15 min per IP)
 app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 100 }));
+
 
 // Stricter limiter on SOS trigger (10 per 15 min per IP — prevents spam)
 const sosLimiter = rateLimit({
