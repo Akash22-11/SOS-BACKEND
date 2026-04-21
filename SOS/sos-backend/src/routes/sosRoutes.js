@@ -3,6 +3,7 @@ const router  = express.Router();
 const ctrl    = require('../controllers/sosController');
 const { protectUser, protectHospital } = require('../middleware/auth');
 
+
 // ── Patient routes ────────────────────────────────────────────────────────────
 
 // Single tap — trigger SOS
