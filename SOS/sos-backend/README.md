@@ -4,6 +4,7 @@ A Node.js/Express backend that notifies nearby hospitals the instant a patient t
 
 ---
 
+
 ## Architecture at a glance
 
 ```
@@ -24,6 +25,7 @@ POST /api/sos/trigger
 ```
 
 ---
+
 
 ## Project structure
 
@@ -61,6 +63,7 @@ sos-backend/
 ├── .env.example
 └── package.json
 ```
+
 
 ---
 
